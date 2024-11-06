@@ -1,5 +1,9 @@
 import random
 
+ROCK = 'r'
+PAPER = 'p'
+SCISSOR = 's'
+
 emojis = {
     'r': '💎',
     'p': '📄',
@@ -22,7 +26,7 @@ def displaying_choice(player, cpu):
 def determine_winner(player, cpu):
     if player == cpu:
         print('Tie!')
-    elif (player == 'r' and cpu == 's') or (player == 'p' and cpu == 'r') or (player == 's' and cpu == 'p'):
+    elif (player == ROCK and cpu == SCISSOR) or (player == PAPER and cpu == ROCK) or (player == SCISSOR and cpu == PAPER):
         print('You win!')
     else:
         print('You lose.')
